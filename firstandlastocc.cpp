@@ -57,9 +57,6 @@ int main(){
 
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Online compiler (CODE STUDIO)~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#include<iostream>
-using namespace std;
-
 int firstOcc(int arr[], int n, int key){
     int s=0,e=n-1;
     int mid=s+(e-s)/2;
@@ -102,10 +99,11 @@ int lastOcc(int arr[], int n, int key){
     return ans;
 }
 
-int main(){
-    int even[11]={1,2,3,3,3,3,3,3,3,5,5};
-  cout << " first occerrence of 3 is at index " <<  firstOcc (even, 11, 3) << endl;
-  cout << " last occerrence of 3 is at index " <<  lastOcc (even, 11, 3) << endl;
-   return 0;
-    }    
+pair<int, int> FirstAndLastPosition (vector <int> & arr, int n, int k)
+{
+    pair<int, int> p;
+p.first= firstOcc(arr, n, k);
+p.second=lastOcc(arr, n, k);
 
+return p;
+}
